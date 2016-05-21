@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+        <title>Wdrażanie! · Django Girls Tutorial</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.0-pre.15">
+        <meta name="author" content="DjangoGirls">
+        
+        
+    
+    <style class="anchorjs"></style><link rel="stylesheet" href="_files/style.html">
+
+    
+            
+                
+                <link rel="stylesheet" href="_files/plugin_004.html">
+                
+            
+                
+                <link rel="stylesheet" href="_files/plugin.html">
+                
+            
+                
+                <link rel="stylesheet" href="_files/website.html">
+                
+            
+                
+                <link rel="stylesheet" href="_files/search_002.html">
+                
+            
+                
+                <link rel="stylesheet" href="_files/website_002.html">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://tutorial.djangogirls.org/pl/gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="http://tutorial.djangogirls.org/pl/gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    
+    
+
+    <link rel="prev" href="http://tutorial.djangogirls.org/pl/django_admin/"><link rel="next" href="http://tutorial.djangogirls.org/pl/django_urls/"></head>
+    <body>
+        
+<div class="book font-size-2 font-family-1 with-summary">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input placeholder="Type to search" type="text">
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://gitter.im/DjangoGirls/tutorial" target="_blank" class="custom-link">Need help? Talk to us!</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://www.gitbook.com/book/djangogirls/djangogirls-tutorial" target="_blank" class="custom-link">Django Girls Tutorial</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="http://tutorial.djangogirls.org/pl/">
+            
+                    
+                    Wprowadzenie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../installation/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/installation/">
+            
+                    
+                    Instalacja
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../how_the_internet_works/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/how_the_internet_works/">
+            
+                    
+                    Jak działa internet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../intro_to_command_line/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/intro_to_command_line/">
+            
+                    
+                    Wprowadzenie do linii poleceń
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../python_installation/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/python_installation/">
+            
+                    
+                    Instalowanie Pythona
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../code_editor/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/code_editor/">
+            
+                    
+                    Edytor kodu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../python_introduction/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/python_introduction/">
+            
+                    
+                    Wprowadzenie do Pythona
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../django/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/django/">
+            
+                    
+                    Czym jest Django?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../django_installation/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/django_installation/">
+            
+                    
+                    Instalowanie Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../django_start_project/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/django_start_project/">
+            
+                    
+                    Twój pierwszy projekt w Django!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../django_models/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/django_models/">
+            
+                    
+                    Modele w Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../django_admin/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/django_admin/">
+            
+                    
+                    Administracja Django (admin)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13" data-path="./">
+            
+                <a href="http://tutorial.djangogirls.org/pl/deploy/">
+            
+                    
+                    Wdrażanie!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../django_urls/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/django_urls/">
+            
+                    
+                    Adresy URL w Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../django_views/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/django_views/">
+            
+                    
+                    Widoki Django - czas je stworzyć!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../html/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/html/">
+            
+                    
+                    Wprowadzenie do HTMLa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../django_orm/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/django_orm/">
+            
+                    
+                    ORM Django (obiekty QuerySet)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../dynamic_data_in_templates/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/dynamic_data_in_templates/">
+            
+                    
+                    Dane dynamiczne w szablonach Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../django_templates/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/django_templates/">
+            
+                    
+                    Szablony Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../css/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/css/">
+            
+                    
+                    CSS - upiększ to
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../template_extending/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/template_extending/">
+            
+                    
+                    Rozbudowa szablonów
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../extend_your_application/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/extend_your_application/">
+            
+                    
+                    Rozbudowa aplikacji
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../django_forms/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/django_forms/">
+            
+                    
+                    Formularze Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../whats_next/">
+            
+                <a href="http://tutorial.djangogirls.org/pl/whats_next/">
+            
+                    
+                    Co dalej?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com/" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <a href="#" aria-label="" class="btn pull-left js-toolbar-action"><i class="fa fa-align-justify"></i></a><a href="#" aria-label="GitHub" class="btn pull-right js-toolbar-action"><i class="fa fa-github"></i></a><div class="dropdown pull-left language-picker js-toolbar-action"><a href="#" aria-label="Change language" class="btn toggle-dropdown"><i class="fa fa-globe"></i></a><div class="dropdown-menu dropdown-right"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div></div></div><div class="dropdown pull-right  js-toolbar-action"><a href="#" aria-label="Share" class="btn toggle-dropdown"><i class="fa fa-share-alt"></i></a><div class="dropdown-menu dropdown-left"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-5 ">Facebook</button><button class="button size-5 ">Google+</button><button class="button size-5 ">Twitter</button><button class="button size-5 ">Weibo</button><button class="button size-5 ">Instapaper</button></div></div></div><a href="#" aria-label="" class="btn pull-right js-toolbar-action"><i class="fa fa-facebook"></i></a><a href="#" aria-label="" class="btn pull-right js-toolbar-action"><i class="fa fa-twitter"></i></a><div class="dropdown pull-left font-settings js-toolbar-action"><a href="#" aria-label="Font Settings" class="btn toggle-dropdown"><i class="fa fa-font"></i></a><div class="dropdown-menu dropdown-right"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-2 font-reduce">A</button><button class="button size-2 font-enlarge">A</button></div><div class="buttons"><button class="button size-2 ">Serif</button><button class="button size-2 ">Sans</button></div><div class="buttons"><button class="button size-3 ">White</button><button class="button size-3 ">Sepia</button><button class="button size-3 ">Night</button></div></div></div><h1 id="wdraanie">
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="http://tutorial.djangogirls.org/pl/">Wdrażanie!</a>
+    <a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: wdraanie" href="#wdraanie" class="anchorjs-link "></a></h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="wdrażanie">Wdrażanie!<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: wdrażanie" href="#wdra%C5%BCanie" class="anchorjs-link "></a></h1>
+<blockquote>
+<p><strong>Uwaga:</strong> Niniejszy rozdział może być miejscami dość 
+trudny. Bądź dzielna i przestudiuj go do końca; wdrażanie jest ważną 
+częścią pracy nad stroną. Celowo umieściłyśmy go tutaj, aby Twój mentor 
+był w stanie pomóc Ci przejść przez skomplikowany proces opublikowania 
+Twojej strony w sieci. Oznacza to, że możesz wciąż ukończyć tutorial 
+samodzielnie, jeśli zabraknie Ci czasu.</p>
+</blockquote>
+<p>Do tej pory Twoja strona była dostępna tylko na Twoim komputerze. 
+Teraz nauczysz się, jak ją wdrożyć! Wdrożenie to inaczej opublikowanie 
+Twojej aplikacji w internecie, dzięki czemu możesz w końcu pokazać ją 
+innym ludziom :).</p>
+<p>Jak już wiesz, strona internetowa musi znajdować się na jakimś 
+serwerze. Istnieje wielu dostawców serwerów w internecie (tzw. firm 
+hostingowych). Skorzystamy z takiego, którego proces wdrażania jest 
+stosunkowo prosty: <a href="http://pythonanywhere.com/" _target="blank">PythonAnywhere</a>.
+ PythonAnywhere jest darmowy dla małych aplikacji, które nie mają zbyt 
+dużo odwiedzających, więc na początek na pewno wystarczy.</p>
+<p>Drugą zewnętrzną usługą, jakiej będziemy używać jest <a href="http://www.github.com/" _target="blank">GitHub</a>,
+ który przechowuje kod. Istnieją inne usługi, ale w dzisiejszych czasach
+ prawie wszyscy programiści mają konto na GitHubie - i Ty dzisiaj do 
+nich dołączysz!</p>
+<p>GitHub będzie takim miejscem pośrednim, którego użyjemy, by 
+przetransportować Twój kod między Twoim komputerem a serwerem 
+PythonAnywhere i z powrotem.</p>
+<h1 id="git">Git<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: git" href="#git" class="anchorjs-link "></a></h1>
+<p>Git jest "systemem kontroli wersji", którego używa wielu 
+programistów. Program ten śledzi zmiany w plikach na przestrzeni czasu, 
+dzięki czemu możesz później przywracać wybrane wersje tych plików. 
+Działa trochę jak funkcja "śledź zmiany" w Microsoft Word, ale jest o 
+wiele bardziej potężny.</p>
+<h2 id="instalacja-gita">Instalacja Gita<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: instalacja gita" href="#instalacja-gita" class="anchorjs-link "></a></h2>
+<blockquote>
+<p><strong>Uwaga</strong> Jeśli już wcześniej przeszłaś kroki 
+instalacyjne, nie musisz ich powtarzać - przejdź od razu do następnego 
+podrozdziału, żeby stworzyć repozytorium Git.</p>
+</blockquote>
+<h3 id="windows">Windows<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: windows" href="#windows" class="anchorjs-link "></a></h3>
+<p>Możesz ściągnąć Gita z <a href="http://git-scm.com/" _target="blank">git-scm.com</a>.
+ Możesz klikać "dalej dalej dalej" na każdym kroku oprócz jednego. W 
+piątym kroku, który nazywa się "Adjusting your PATH environment", 
+wybierz "Run Git and associated Unix tools from the Windows 
+command-line" (opcję na samej górze). Poza tym domyślne ustawienia są w 
+porządku. Upewnij się jeszcze, że w kroku "Configuring the line ending 
+conversions" wybrana jest opcja "Checkout Windows-style, commit 
+Unix-style line endings".</p>
+<h3 id="macos">MacOS<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: macos" href="#macos" class="anchorjs-link "></a></h3>
+<p>Ściągnij Gita z <a href="http://git-scm.com/" _target="blank">git-scm.com</a> i postępuj zgodnie z instrukcją.</p>
+<h3 id="linux">Linux<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: linux" href="#linux" class="anchorjs-link "></a></h3>
+<p>Możliwe, że git jest już zainstalowany domyśle, ale jeśli tak nie 
+jest, powinien być dostępny za pośrednictwem menedżera pakietów, więc 
+spróbuj:</p>
+<pre><code>sudo apt-get install git
+# or
+sudo yum install git
+</code></pre><h2 id="tworzenie-repozytorium-git">Tworzenie repozytorium Git<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: tworzenie repozytorium git" href="#tworzenie-repozytorium-git" class="anchorjs-link "></a></h2>
+<p>Git śledzi zmiany dokonywane w zbiorze plików w czymś, co nazywamy 
+repozytorium kodu (albo po prostu "repo", żeby było krócej). Stwórzmy 
+takie repozytorium dla naszego projektu. Otwórz konsolę w katalogu <code>djangogirls</code> i wpisz następujące polecenia:</p>
+<blockquote>
+<p><strong>Uwaga</strong> Zanim utworzysz repozytorium, sprawdź w jakim katalogu obecnie się znajdujesz, wpisujac <code>pwd</code> (OSX/Linux) lub <code>cd</code> (Windows). Powinnaś się znajdować w katalogu <code>djangogirls</code>.</p>
+</blockquote>
+<pre><code>$ git init
+Initialized empty Git repository in ~/djangogirls/.git/
+$ git config --global user.name "Twoja Nazwa Uzytkownika"
+$ git config --global user.email ty@adres.pl
+</code></pre><p>Inicjalizacja repozytorium to coś, co będziesz musiała 
+zrobić tylko raz na dany projekt (i nie będziesz musiała już wpisywać 
+swojej nazwy użytkownika i adresu email).</p>
+<p>Git będzie śledzić zmiany we wszyskich plikach i folderach w tym 
+katalogu, ale zwróć uwagę, że znajdują się w nim pewne pliki, których 
+zmiany chcemy ignorować. By to zrobić, musimy utworzyć w tym katalogu 
+plik, który nazwiemy <code>.gitignore</code>. Otwórz swój edytor kodu i utwórz nowy plik o następującej treści:</p>
+<pre><code>*.pyc
+__pycache__
+myvenv
+db.sqlite3
+.DS_Store
+</code></pre><p>Zapisz go jako <code>.gitignore</code> w folderze najwyższego poziomu "djangogirls".</p>
+<blockquote>
+<p><strong>Uwaga</strong> Ta kropka na początku nazwy pliku jest ważna! 
+Jeśli masz jakieś problemy z utworzeniem tego pliku (na przykład, jeśli 
+pracujesz na Macu to Finder broni się przed zapisywaniem plików, które 
+zaczynają się od kropki) to użyj "Zapisz jako" w swoim edytorze, działa 
+bezbłędnie.</p>
+</blockquote>
+<p>Dobrym nawykiem jest wpisywanie polecenia <code>git status</code> zanim wpiszesz <code>git add</code>
+ albo gdy nie jesteś pewna co się zmieniło. To powinno cię ustrzec przed
+ nieprzyjemnymi niespodziankami, takimi jak dodanie lub zmienienie 
+nieprawidłowych plików. Polecenie <code>git status</code> zwraca między 
+innymi informacje o plikach, które zostały dodane/zmienione/usunięte. Po
+ wpisaniu polecenia powinnaś zobaczyć coś podobnego do tego:</p>
+<pre><code>$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+        .gitignore
+        blog/
+        manage.py
+        mysite/
+
+nothing added to commit but untracked files present (use "git add" to track)
+</code></pre><p>I na końcu zapisujemy zmiany. Przejdź do konsoli i wykonaj poniższe polecenia:</p>
+<pre><code>$ git add --all .
+$ git commit -m "My Django Girls app, first commit"
+ [...]
+ 13 files changed, 200 insertions(+)
+ create mode 100644 .gitignore
+ [...]
+ create mode 100644 mysite/wsgi.py
+</code></pre><h2 id="przesyłanie-naszego-kodu-do-githuba">Przesyłanie naszego kodu do GitHuba<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: przesyłanie naszego kodu do githuba" href="#przesy%C5%82anie-naszego-kodu-do-githuba" class="anchorjs-link "></a></h2>
+<p>Wejdź na stronę <a href="http://www.github.com/" _target="blank">GitHub.com</a> i utwórz nowe darmowe konto. (Jeśli już to wcześniej zrobiłaś to super!)</p>
+<p>Potem utwórz nowe repozytorium i nadaj mu nazwę "my-first-blog" (ang.
+ "mój pierwszy blog") Nie zaznaczaj opcji "initialise with a README", 
+nie zmieniaj nic przy polach .gitignore (powinno być None, same 
+załatwiliśmy tę sprawę wcześniej). Licencja też powinna być ustawiona 
+jako None.</p>
+<p><img src="_files/new_github_repo.png" alt=""></p>
+<blockquote>
+<p><strong>Uwaga</strong> Nazwa <code>my-first-blog</code> jest ważna --
+ mogłabyś wybrać jakąś inną, ale będziemy tej nazwy używać wiele razy i 
+za każdym razem musiałabyś pamiętać, żeby zastępować "my-first-blog" 
+swoją wybraną nazwą. Z tego powodu najłatwiej będzie jak użyjesz nazwy <code>my-first-blog</code>.</p>
+</blockquote>
+<p>Na następnej stronie wyświetli Ci się adres URL do klonowania Twojego
+ repozytorium. Wybierz wersję "HTTPS" i skopiuj ją. Niedługo będziemy 
+tego adresu potrzebować.</p>
+<p><img src="_files/github_get_repo_url_screenshot.png" alt=""></p>
+<p>Teraz musimy podpiąć repozytorium Git na komputerze do tego na GitHubie.</p>
+<p>Wpisz następujące polecenie do konsoli (Zamień <code>&lt;your-github-username&gt;</code>
+ na swoją nazwę użytkownika, którą podałaś przy tworzeniu konta na 
+GitHubie, ale bez nawiasów ostrokątnych, czyli "&lt;" i "&gt;"):</p>
+<pre><code>$ git remote add origin https://github.com/&lt;your-github-username&gt;/my-first-blog.git
+$ git push -u origin master
+</code></pre><p>Wpisz swoją nazwę użytkownika GitHub oraz hasło, a wtedy powinnaś zobaczyć coś takiego:</p>
+<pre><code>Username for 'https://github.com': hjwp
+Password for 'https://hjwp@github.com':
+Counting objects: 6, done.
+Writing objects: 100% (6/6), 200 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/hjwp/my-first-blog.git
+ * [new branch]      master -&gt; master
+Branch master set up to track remote branch master from origin.
+</code></pre><!--TODO: maybe do ssh keys installs in install party, and point ppl who dont have it to an extention -->
+<p>Twój kod jest teraz na GitHubie. Możesz to sprawdzić! Zważ, że znajduje się w wyśmienitym towarzystwie - <a href="https://github.com/django/django" _target="blank">Django</a>, <a href="https://github.com/DjangoGirls/tutorial" _target="blank">kurs Django Girls</a> i wiele innych świetnych projektów open-source trzyma swój kod na GitHubie :)</p>
+<h1 id="wdrażanie-bloga-na-pythonanywhere">Wdrażanie bloga na PythonAnywhere<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: wdrażanie bloga na pythonanywhere" href="#wdra%C5%BCanie-bloga-na-pythonanywhere" class="anchorjs-link "></a></h1>
+<blockquote>
+<p><strong>Uwaga</strong> Możliwe, że już wcześniej utworzyłaś konto na 
+PythonAnywhere, jeśli przeszłaś przez wszystkie kroki w rozdziale 
+instalacyjnym - nie ma potrzeby, byś robiła to drugi raz.</p>
+</blockquote>
+<p>Czas utworzyć darmowe konto (opcja "Beginner" - dla początkujących) na PythonAnywhere.</p>
+<ul>
+<li><a href="https://www.pythonanywhere.com/" _target="blank">www.pythonanywhere.com</a></li>
+</ul>
+<blockquote>
+<p><strong>Uwaga</strong> Wybierając swoją nazwę użytkownika, weź pod uwagę, że twój adres na PythonAnywhere będzie z nią związany <code>twojanazwauzytkownika.pythonanywhere.com</code>. Dlatego polecamy wybrać nazwę, z którą się utożsamiasz albo która jest związana z tematyką Twojego bloga.</p>
+</blockquote>
+<h2 id="umieszczanie-naszego-kodu-na-pythonanywhere">Umieszczanie naszego kodu na PythonAnywhere<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: umieszczanie naszego kodu na pythonanywhere" href="#umieszczanie-naszego-kodu-na-pythonanywhere" class="anchorjs-link "></a></h2>
+<p>Kiedy już zakończysz tworzenie konta na PythonAnywhere, zostaniesz 
+przeniesiona do strony nawigacyjnej albo do strony "Konsole" (ang. 
+"Consoles"). Wybierz opcję, by włączyć konsolę "Bash" -- to jest 
+PythonAnywhere'owa wersja konsoli, którą masz na swoim komputerze.</p>
+<blockquote>
+<p><strong>Uwaga</strong> PythonAnywhere jest oparty na Linuksie, więc 
+jeśli pracujesz na Windowsie to konsola będzie wyglądać trochę inaczej 
+niż na Twoim komputerze.</p>
+</blockquote>
+<p>Umieśćmy nasz kod z GitHuba na PythonAnywhere. Zrobimy to "klonując" 
+(ang. "clone") nasze repozytorium. Wpisz następujące polecenie do 
+konsoli w PythonAnywhere (nie zapomnij zamienić <code>&lt;your-github-username&gt;</code> na swoją nazwę użytkownika):</p>
+<pre><code>$ git clone https://github.com/&lt;your-github-username&gt;/my-first-blog.git
+</code></pre><p>To polecenie ściągnie kopię twojego kodu na PythonAnywhere. By to sprawdzić, wpisz <code>tree my-first-blog</code>:</p>
+<pre><code>$ tree my-first-blog
+my-first-blog/
+├── blog
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── manage.py
+└── mysite
+    ├── __init__.py
+    ├── settings.py
+    ├── urls.py
+    └── wsgi.py
+</code></pre><h3 id="tworzenie-środowiska-wirtualnego-na-pythonanywhere">Tworzenie środowiska wirtualnego na PythonAnywhere<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: tworzenie środowiska wirtualnego na pythonanywhere" href="#tworzenie-%C5%9Brodowiska-wirtualnego-na-pythonanywhere" class="anchorjs-link "></a></h3>
+<p>Tak samo jak to robiłaś na swoim komputerze, możesz stworzyć środowisko wirtualne na PythonAnywhere. W konsoli Bash wpisz:</p>
+<pre><code>$ cd my-first-blog
+
+$ virtualenv --python=python3.4 myvenv
+Running virtualenv with interpreter /usr/bin/python3.4
+[...]
+Installing setuptools, pip...done.
+
+$ source myvenv/bin/activate
+
+(mvenv) $  pip install django whitenoise
+Collecting django
+[...]
+Successfully installed django-1.8.2 whitenoise-2.0
+</code></pre><blockquote>
+<p><strong>Uwaga</strong> Polecenie <code>pip install</code> może trochę
+ potrwać. Cierpliwości, cierpliwości! Jednak jeśli trwa to dłużej niż 5 
+min, coś jest nie tak. Spytaj swojego mentora.</p>
+</blockquote>
+<!--TODO: think about using requirements.txt instead of pip install.-->
+<h3 id="pobieranie-plików-statycznych">Pobieranie plików statycznych.<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: pobieranie plików statycznych" href="#pobieranie-plik%C3%B3w-statycznych" class="anchorjs-link "></a></h3>
+<p>Zastanawiałaś się o co chodziło z "whitenoise"? Jest to narzędzie dla
+ tak zwanych "plików statycznych". Pliki statyczne to pliki, które nie 
+zmieniają się zbyt często, takie jak pliki HTML czy CSS. Zachowują się 
+one inaczej na serwerach niż na naszych własych komputerach i dlatego 
+potrzebujemy takich narzędzi jak "whitenoise", by je obsługiwać.</p>
+<p>Dowiemy się więcej o plikach statycznych później, kiedy będziemy zmieniać pliki CSS naszej strony.</p>
+<p>Na tę chwilę musimy tylko uruchomić polecenie <code>collectstatic</code>
+ na serwerze. Polecenie to mówi Django, by zebrał wszystkie pliki 
+statyczne, których potrzebuje na serwerze. W tym momencie chodzi głównie
+ o pliki, które upiększają nam panel admina.</p>
+<pre><code>(mvenv) $ python manage.py collectstatic
+
+You have requested to collect static files at the destination
+location as specified in your settings:
+
+    /home/edith/my-first-blog/static
+
+This will overwrite existing files!
+Are you sure you want to do this?
+
+Type 'yes' to continue, or 'no' to cancel: yes
+</code></pre><p>Wpisz "yes" i niech hula maszyna! Czy to nie piękne, jak
+ komputer wypluwa z siebie dłuugie strony tekstu? Ja czasami wydaję 
+ciche dźwięki, które mi się z tym kojarzą. Pip, pip, piiiip...</p>
+<pre><code>Copying '/home/edith/my-first-blog/mvenv/lib/python3.4/site-packages/django/contrib/admin/static/admin/js/actions.min.js'
+Copying '/home/edith/my-first-blog/mvenv/lib/python3.4/site-packages/django/contrib/admin/static/admin/js/inlines.min.js'
+[...]
+Copying '/home/edith/my-first-blog/mvenv/lib/python3.4/site-packages/django/contrib/admin/static/admin/css/changelists.css'
+Copying '/home/edith/my-first-blog/mvenv/lib/python3.4/site-packages/django/contrib/admin/static/admin/css/base.css'
+62 static files copied to '/home/edith/my-first-blog/static'.
+</code></pre><h3 id="tworzenie-bazy-danych-na-pythonanywhere">Tworzenie bazy danych na PythonAnywhere<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: tworzenie bazy danych na pythonanywhere" href="#tworzenie-bazy-danych-na-pythonanywhere" class="anchorjs-link "></a></h3>
+<p>Oto kolejna różnica między Twoim komputerem a serwerem: serwer używa 
+innej bazy danych. Tak więc możesz mieć inne konta użytkowników i posty 
+na serwerze, a inne na swoim komputerze.</p>
+<p>Możemy zainicjować bazę danych na serwerze dokładnie w ten sam sposób, w jaki zrobiliśmy to na swoim komputerze, poleceniami <code>migrate</code> i <code>createsuperuser</code>:</p>
+<pre><code>(mvenv) $ python manage.py migrate
+Operations to perform:
+[...]
+  Applying sessions.0001_initial... OK
+
+
+(mvenv) $ python manage.py createsuperuser
+</code></pre><h2 id="publikowanie-naszego-bloga-jako-aplikacji-internetowej">Publikowanie naszego bloga jako aplikacji internetowej<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: publikowanie naszego bloga jako aplikacji internetowej" href="#publikowanie-naszego-bloga-jako-aplikacji-internetowej" class="anchorjs-link "></a></h2>
+<p>Nasz kod znajduje się na PythonAnywhere, nasze środowisko wirtualne 
+działa, mamy nasze pliki statyczne i zainicjowaliśmy bazę danych. 
+Jesteśmy gotowi opublikować naszą aplikację internetową!</p>
+<p>Kliknij na logo PythonAnywhere, by wrócić do panelu nawigacyjnego, a potem kliknij na zakładkę <strong>Web</strong>. Następnie kliknij <strong>Add a new web app</strong> (czyli po polsku: "Dodaj nową aplikację internetową").</p>
+<p>Po potwierdzeniu nazwy domeny, w oknie dialogowym wybierz konfigurację ręczną, czyli po angielsku <strong>manual configuration</strong> (<em>nie</em> opcję "Django"). Następnie wybierz <strong>Python 3.4</strong> i kliknij przycisk Dalej, aby zakończyć.</p>
+<blockquote>
+<p><strong>Uwaga</strong> Upewnij się, że wybrałaś opcję "Ręczna 
+konfiguracja", nie "Django". Jesteśmy zbyt fajne, aby używać domyślnej 
+konfiguracji Django na PythonAnywhere ;-)</p>
+</blockquote>
+<h3 id="ustawienie-wirtualnego-środowiska">Ustawienie wirtualnego środowiska<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: ustawienie wirtualnego środowiska" href="#ustawienie-wirtualnego-%C5%9Brodowiska" class="anchorjs-link "></a></h3>
+<p>Zostaniesz przeniesiony do strony konfiguracji Twojej aplikacji 
+internetowej, czyli do miejsca, gdzie musisz się udać, gdy chcesz zrobić
+ zmiany w swojej aplikacji na serwerze.</p>
+<p><img src="_files/pythonanywhere_web_tab_virtualenv.png" alt=""></p>
+<p>W sekcji dotyczącej środowiska wirtualnego ("Virtualenv") kliknij na 
+czerwone pole z napisem "Enter the path to a virtualenv" i wpisz: <code>/home/&lt;your-username&gt;/my-first-blog/myvenv/</code>. Kliknij w niebieski prostokąt obok, aby zapisać ścieżkę przed przejściem do dalszej części.</p>
+<blockquote>
+<p><strong>Uwaga</strong> Podmień nazwę użytkownika na właściwą. Jeśli się pomylisz, PythonAnywhere da Ci małe ostrzeżenie.</p>
+</blockquote>
+<h3 id="konfiguracja-pliku-wsgi">Konfiguracja pliku WSGI<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: konfiguracja pliku wsgi" href="#konfiguracja-pliku-wsgi" class="anchorjs-link "></a></h3>
+<p>Django używa "protokołu WSGI", standardu serwowania stron 
+internetowych za pomocą Pythona, którego wspiera PythonAnywhere. Musimy 
+zedytować plik konfiguracyjny WSGI tak, aby PythonAnywhere rozpoznawał 
+naszego Django bloga.</p>
+<p>Kliknij na link "WSGI configuration file" (w sekcji "Code" w górnej części strony - będzie nazywać się mniej więcej tak <code>/var/www/&lt;twoja-nazwa-uzytkownika&gt;_pythonanywhere_com_wsgi.py</code>), a zostaniesz przeniesiona do edytora.</p>
+<p>Skasuj całą zawartość pliku i zastąp ją następującym tekstem:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">import</span> sys
+
+path = <span class="hljs-string">'/home/&lt;your-username&gt;/my-first-blog'</span>  <span class="hljs-comment"># use your own username here</span>
+<span class="hljs-keyword">if</span> path <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> sys.path:
+    sys.path.append(path)
+
+os.environ[<span class="hljs-string">'DJANGO_SETTINGS_MODULE'</span>] = <span class="hljs-string">'mysite.settings'</span>
+
+<span class="hljs-keyword">from</span> django.core.wsgi <span class="hljs-keyword">import</span> get_wsgi_application
+<span class="hljs-keyword">from</span> whitenoise.django <span class="hljs-keyword">import</span> DjangoWhiteNoise
+application = DjangoWhiteNoise(get_wsgi_application())
+</code></pre>
+<blockquote>
+<p><strong>Uwaga</strong> Nie zapomnij zastąpić wszystkich wystąpień <code>&lt;your-username&gt;</code> swoją nazwą użytkownika.</p>
+</blockquote>
+<p>Zadaniem tego pliku jest powiedzenie PythonAnywhere gdzie znajduje 
+się nasza aplikacja i jaka jest nazwa naszego pliku z ustawieniami 
+Django. Również zajmuje się poznanym wcześniej narzędziem "whitenoise", 
+służącym do obsługi plików statycznych.</p>
+<p>Naciśnij <strong>Zapisz</strong> i potem wróć do karty <strong>Web</strong>.</p>
+<p>Mamy wszystko gotowe! Naciśnij duży zielony przycisk <strong>Reload</strong> ("Odśwież"), a będziesz mogła odwiedzić swoją aplikację. Znajdziesz do niej link na górze strony.</p>
+<h2 id="porady-dotyczące-debugowania">Porady dotyczące debugowania<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: porady dotyczące debugowania" href="#porady-dotycz%C4%85ce-debugowania" class="anchorjs-link "></a></h2>
+<p>Jeśli odwiedzając swoją stronę zobaczysz błąd, to pierwszym miejscem,
+ w którym powinnaś poszukać informacji o tym, co się stało jest twój <strong>dziennik błędów</strong> (ang. "error log"). Znajdziesz do niego link na karcie <a href="https://www.pythonanywhere.com/web_app_setup/" _target="blank">Web</a>
+ w PythonAnywhere. Sprawdź czy znajdują się tam jakieś komunikaty o 
+błędach; te najświeższe znajdują się na samym dole strony. Typowe 
+problemy to:</p>
+<ul>
+<li><p>Pominięcie jednego z kroków, które powinnyśmy zrobić w konsoli: 
+stworzenie środowiska wirtualnego, aktywowanie go, instalacja Django, 
+pobranie plików statycznych, migracja bazy danych.</p>
+</li>
+<li><p>Pomyłka w ścieżce do środowiska wirtualnego w zakładce "Web" -- 
+jeśli coś jest nie tak, wyświetli Ci się tam mały czerwony komunikat 
+błędu.</p>
+</li>
+<li><p>Zrobienie błędu w pliku konfiguracyjnym WSGI -- czy dobrze zapisałaś ścieżkę do katalogu my-first-blog?</p>
+</li>
+<li><p>Czy wybrałaś tę samą wersję Pythona dla Twojego środowiska wirtualnego, co dla aplikacji internetowej? Obie powinny być 3.4.</p>
+</li>
+<li><p>Istnieje kilka <a href="https://www.pythonanywhere.com/wiki/DebuggingImportError" _target="blank">ogólnych porad dotyczących debugowania na PythonAnywhere wiki</a>.</p>
+</li>
+</ul>
+<p>I pamiętaj, Twój mentor jest tutaj, by Ci pomóc!</p>
+<h1 id="twoja-strona-jest-w-internecie">Twoja strona jest w internecie!<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: twoja strona jest w internecie" href="#twoja-strona-jest-w-internecie" class="anchorjs-link "></a></h1>
+<p>Teraz na Twojej stronie w internecie powinny widniać słowa "Welcome 
+to Django", dokładnie tak samo jak gdy otwierasz stronę znajdującą się 
+na dysku lokalnym. Jeśli dodasz <code>/admin/</code> na koniec swojego 
+adresu URL, powinnaś się przenieść do panelu admina. Zaloguj się swoim 
+loginem i hasłem, a wtedy zobaczysz, że jesteś w stanie dodawać nowe 
+posty na serwerze.</p>
+<p><em>Przybij piątkę!</em> Wdrażanie to jedna z najtrudniejszych i 
+najbardziej skomplikowanych części projektowania stron internetowych. 
+Często całemu zespołowi ludzi zajmuje to kilka dni zanim wszystko 
+zacznie działać. Ale Tobie tak szybko udało się wdrożyć swoją stronę, 
+jest ona w prawdziwym internecie!</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 id="results-matching" class="search-results-title"><span class="search-results-count"></span> results matching "<span class="search-query"></span>"<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: results matching" href="#results-matching" class="anchorjs-link "></a></h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 id="no-results-matching" class="search-results-title">No results matching "<span class="search-query"></span>"<a style="padding-left: 0.375em;" data-anchorjs-icon="#" aria-label="Anchor link for: no results matching" href="#no-results-matching" class="anchorjs-link "></a></h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="http://tutorial.djangogirls.org/pl/django_admin/" class="navigation navigation-prev " aria-label="Previous page: Administracja Django (admin)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a style="margin-right: 0px;" href="http://tutorial.djangogirls.org/pl/django_urls/" class="navigation navigation-next " aria-label="Next page: Adresy URL w Django">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Wdrażanie!","level":"1.13","depth":1,"next":{"title":"Adresy URL w Django","level":"1.14","depth":1,"path":"django_urls/README.md","ref":"django_urls/README.md","articles":[]},"previous":{"title":"Administracja Django (admin)","level":"1.12","depth":1,"path":"django_admin/README.md","ref":"django_admin/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.7","github@2.0.0","language-picker",""],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"heading-anchors":{},"highlight":{},"ga":{"token":"UA-51680040-3","configuration":"auto"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":"DjangoGirls/tutorial","theme":"default","author":"DjangoGirls","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Django Girls Tutorial","language":"en","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial","Django Girls Tutorial":"https://www.gitbook.com/book/djangogirls/djangogirls-tutorial"},"gitbook":true},"gitbook":"*","description":"This book is a Django tutorial created for DjangoGirls event."},"file":{"path":"deploy/README.md","mtime":"2016-05-21T06:30:48.000Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.15","time":"2016-05-21T06:32:19.749Z"},"basePath":"..","book":{"language":"pl"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="_files/gitbook.html"></script>
+    <script src="_files/theme.html"></script>
+    
+        
+        <script src="_files/anchor.js"></script>
+        
+    
+        
+        <script src="_files/anchor-style.html"></script>
+        
+    
+        
+        <script src="_files/plugin_005.html"></script>
+        
+    
+        
+        <script src="_files/plugin_003.html"></script>
+        
+    
+        
+        <script src="_files/plugin_002.html"></script>
+        
+    
+        
+        <script src="_files/search-engine.html"></script>
+        
+    
+        
+        <script src="_files/search.html"></script>
+        
+    
+        
+        <script src="_files/lunr.html"></script>
+        
+    
+        
+        <script src="_files/search-lunr.html"></script>
+        
+    
+        
+        <script src="_files/buttons_002.html"></script>
+        
+    
+        
+        <script src="_files/buttons.html"></script>
+        
+    
+
+    
+
+
+</body></html>
